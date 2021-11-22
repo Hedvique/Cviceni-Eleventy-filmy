@@ -1,0 +1,10 @@
+---
+layout: zakladni
+pagination:
+  data: filmy
+  size: 1 
+  alias: film
+permalink: "/filmy/{{ film.nazev | slug }}/"
+---
+
+<h2>{{ film.nazev }}</h2>
