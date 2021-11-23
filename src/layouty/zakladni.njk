@@ -3,11 +3,16 @@
   	<head>
   		<meta charset="UTF-8" />
   		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  		<title>FILMY.cz</title>
+  		<title>
+          {{ film.nazev }} -
+          {% if nadpis %}{{ nadpis }} | {% endif %} FILMY
+        </title>
         <link rel="stylesheet" href="/index.css">
+
   	</head>
   	<body>
       {% include "hlavicka.njk" %}
       {{ content | safe }}
+      {% include "paticka.njk" %}
     </body>
   </html>

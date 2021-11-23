@@ -1,3 +1,11 @@
 .hlavicka {
     background-color: #9c27b0;
+    padding: 1rem;
+
+    &__obsah {
+        max-width: 50rem;
+        width: 100%;
+        margin: 0 auto;
+        padding: 1rem;
+    }
 }
