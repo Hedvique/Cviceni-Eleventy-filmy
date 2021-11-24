@@ -5,9 +5,9 @@ layout: zakladni
 <div class="layout-telo">
   <h1 class="hlavni-nadpis">Všechny</h1>
 
-  <ul>
+  <ul class"seznam">
   	{% for film in filmy %}
-  		<li><a href="/filmy/{{ film.nazev | slug }}">{{ film.nazev }}</a></li>
+  		<li class="seznam__polozka"><a class="seznam__odkaz" href="/filmy/{{ film.nazev | slug }}">{{ film.nazev }}</a></li>
   	{% endfor %}
   </ul>
 </div>

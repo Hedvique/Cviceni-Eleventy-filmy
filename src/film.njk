@@ -7,20 +7,20 @@ pagination:
 permalink: "/filmy/{{ film.nazev | slug }}/"
 ---
 
-<<div class="detail">
-	<section class="detail__hlavni">
-		<h2 class="hlavni-nadpis">{{ film.nazev }}</h2>
+<section class="detail">
+    <section class="detail__hlavni">
+      <h2 class="hlavni-nadpis">{{ film.nazev }}</h2>
 
-    <p><span style="font-weight:bold"> Rok: </span> {{ film.rok }} </p>
-    <p><span style="font-weight:bold"> Země: </span> {{ film.zeme | join(', ') }}</p>
-    <p><span style="font-weight:bold"> žánr: </span> {{ film.zanr | join(' / ') }} </p>
-    <p><span style="font-weight:bold"> Délka: </span> {{ film.delka }} minut</p>
+      <p><span style="font-weight:bold"> Rok: </span> {{ film.rok }} </p>
+      <p><span style="font-weight:bold"> Země: </span> {{ film.zeme | join(', ') }}</p>
+      <p><span style="font-weight:bold"> žánr: </span> {{ film.zanr | join(' / ') }} </p>
+      <p><span style="font-weight:bold"> Délka: </span> {{ film.delka }} minut</p>
 
-    <h3>Obsah</h3>
-		<p> {{ film.obsah.text }} (<a class="autor__odkaz" href="{{ film.obsah.autor.odkaz }}">{{ film.obsah.autor.jmeno }}</a>)</p>
-	</section>
+      <h3>Obsah</h3>
+      <p> {{ film.obsah.text }} (<a class="autor__odkaz" href="{{ film.obsah.autor.odkaz }}">{{ film.obsah.autor.jmeno }}</a>)</p>
+    </section>
 
-  <section class="detail__vedlejsi">
-    <img class="detail__plakat" src="{{ film.plakat.url }}" width="{{ film.plakat.sirka }}" vyska="{{ film.plakat.height }}" alt="plakát">
-  </section>
-	
+    <section class="detail__vedlejsi">
+      <img class="detail__plakat" src="{{ film.plakat.url }}" width="{{ film.plakat.sirka }}" vyska="{{ film.plakat.height }}" alt="plakát">
+    </section>
+</section>
